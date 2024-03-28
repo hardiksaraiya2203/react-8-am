@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { DateUp } from './DateCounter';
+import Counter from './Counter';
+import DisplayDataWithApi from './DisplayDataWithApi';
+import ShowBirthday from './ShowBirthday';
+import ProductDisplay from './ProductDisplay';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ShowBirthday />
   </React.StrictMode>
 );
 
