@@ -10,11 +10,13 @@ import ShowBirthday from './ShowBirthday';
 import ProductDisplay from './ProductDisplay';
 import Reviews from './Reviews';
 import Login from './Login';
+import CounterOnChange from './CounterOnChange';
+import LoginWithSelect from './LoginWithSelect';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Login />
+    <LoginWithSelect />
   </React.StrictMode>
 );
 
