@@ -8,11 +8,13 @@ import Counter from './Counter';
 import DisplayDataWithApi from './DisplayDataWithApi';
 import ShowBirthday from './ShowBirthday';
 import ProductDisplay from './ProductDisplay';
+import Reviews from './Reviews';
+import Login from './Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ShowBirthday />
+    <Login />
   </React.StrictMode>
 );
 
