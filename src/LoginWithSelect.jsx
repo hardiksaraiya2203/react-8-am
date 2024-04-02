@@ -19,8 +19,8 @@ const LoginWithSelect = () => {
     <div>
         <form action="">
 
-      <select name="contact" id="contact"  onChange={handleInput}>
-        <option value="select" selected>--Select--</option>
+      <select name="contact" id="contact" onChange={handleInput}>
+        <option value="select">--Select--</option>
         <option value="Home">Home</option>
         <option value="Office">Office</option>
       </select>
