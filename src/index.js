@@ -12,11 +12,16 @@ import Reviews from './Reviews';
 import Login from './Login';
 import CounterOnChange from './CounterOnChange';
 import LoginWithSelect from './LoginWithSelect';
+import DisplayDataWithAxios from './DisplayDataWithAxios';
+import FormikForm from './FormikForm';
+import FormikRegistration from './FormikRegistration';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import FormikWithYup from './FormikWithYup';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <LoginWithSelect />
+    <FormikWithYup />
   </React.StrictMode>
 );
 
