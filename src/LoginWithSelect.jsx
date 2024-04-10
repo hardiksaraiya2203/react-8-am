@@ -6,9 +6,11 @@ const LoginWithSelect = () => {
     firstName: "",
     lastName: "",
   });
+  const [details, setDetails] = useState();
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(data);
+    setDetails(data.firstName)
   };
 
   const handleInput = (e) => {
@@ -19,7 +21,9 @@ const LoginWithSelect = () => {
     <div>
       <form action="">
         <select name="contact" id="contact" onChange={handleInput}>
-          <option value="select">--Select--</option>
+          <option value="select" disabled={true}>
+            --Select--
+          </option>
           <option value="Home">Home</option>
           <option value="Office">Office</option>
         </select>
@@ -43,6 +47,7 @@ const LoginWithSelect = () => {
       <button type="submit" onClick={handleSubmit}>
         Submit
       </button>
+      {details}
     </div>
   );
 };

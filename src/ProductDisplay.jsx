@@ -25,6 +25,7 @@ const ProductDisplay = () => {
               <button
                 onClick={() => {
                   handleNI(index);
+                  console.log(index);
                 }}
               >
                 NI

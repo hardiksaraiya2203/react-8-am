@@ -17,11 +17,14 @@ import FormikForm from './FormikForm';
 import FormikRegistration from './FormikRegistration';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FormikWithYup from './FormikWithYup';
+import LoginWithFYup from './LoginWithFYup';
+import { Validate } from './RegistrationWithFCustom';
+import Grocery from './Grocery';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <FormikWithYup />
+    <DisplayDataWithAxios />
   </React.StrictMode>
 );
 
@@ -29,3 +32,6 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+// FormikWithYup done
+// fwlogic r
+// fmui cj
