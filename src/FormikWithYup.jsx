@@ -12,12 +12,12 @@ const FormikWithYup = () => {
       password: Yup.string()
         .required("password is required")
         .min(6, "minimum 6 characters required")
-        .max(15, "minimum 6 characters required"),
+        .max(15, "maximum 15 characters required"),
       confirmPassword: Yup.string()
         .required("password is required")
         .oneOf(
           [Yup.ref("password"), null],
-          "confirmPassword does not march password"
+          "confirmPassword does not match password"
         ),
       acceptTerms: Yup.bool().oneOf([true], "Accept terms must be checked"),
     });
@@ -46,7 +46,7 @@ const FormikWithYup = () => {
             <Field name="firstName" type="text" className="form-control" />
             <ErrorMessage
               name="firstName"
-              component="div"
+              component="span"
               className="text-danger"
             />
           </div>

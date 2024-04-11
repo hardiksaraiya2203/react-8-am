@@ -20,11 +20,13 @@ import FormikWithYup from './FormikWithYup';
 import LoginWithFYup from './LoginWithFYup';
 import { Validate } from './RegistrationWithFCustom';
 import Grocery from './Grocery';
+import Product from './Product';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DisplayDataWithAxios />
+    <Validate />
+    
   </React.StrictMode>
 );
 
@@ -32,6 +34,4 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-// FormikWithYup done
-// fwlogic r
-// fmui cj
+

@@ -7,7 +7,9 @@ const GroceryItems = (props) => {
   <div>
     {
       props.data.map((value,index)=>{
-        return (<div key={index}>{value} <button>Edit</button><button>Delete</button></div>)
+        return (<div key={index}>{value} <button onClick={() => {
+          props.deleteData.deleteData(index);          
+        }}>Edit</button><button>Delete</button></div>)
       })
     }
   </div>

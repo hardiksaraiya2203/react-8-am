@@ -6,11 +6,9 @@ const LoginWithSelect = () => {
     firstName: "",
     lastName: "",
   });
-  const [details, setDetails] = useState();
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(data);
-    setDetails(data.firstName)
   };
 
   const handleInput = (e) => {
@@ -47,7 +45,7 @@ const LoginWithSelect = () => {
       <button type="submit" onClick={handleSubmit}>
         Submit
       </button>
-      {details}
+      {data.firstName}
     </div>
   );
 };
