@@ -22,13 +22,19 @@ import { Validate } from './RegistrationWithFCustom';
 import Grocery from './Grocery';
 import Product from './Product';
 import ParentForCrud from './ParentForCrud';
+import { BrowserRouter } from 'react-router-dom';
+import W3Routes from './W3Routes';
+import W3Navbar from './W3Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ParentForCrud />
-    
-  </React.StrictMode>
+    <BrowserRouter>
+      <W3Navbar />
+      <W3Routes />
+    </BrowserRouter>
+
+  </React.StrictMode >
 );
 
 // If you want to start measuring performance in your app, pass a function

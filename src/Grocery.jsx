@@ -16,13 +16,15 @@ const Grocery = () => {
     let p = [...data];
     p.push(inp);
     setData(p);
+    setInp("")
+    console.log(inp);
   };
 
   const deleteData = (index) =>{
     let p = [...data]
     p.splice(index,1)
+    console.log(p)
     setData(p)
-    alert("aaaaaaaaa")
   }
 
   return (
@@ -31,7 +33,7 @@ const Grocery = () => {
 
       <input type="submit" value="Save" onClick={handleClick} />
 
-      <GroceryItems data={data} deleteData={deleteData}/>
+      <GroceryItems data={data} setData={setData} deleteData={deleteData}/>
     </div>
   );
 };
