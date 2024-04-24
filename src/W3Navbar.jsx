@@ -17,9 +17,9 @@ import { Link as RouterLink } from "react-router-dom";
 
 const pages = ["Html", "CSS", "JavaScript"];
 const pages1 = [
-  { name: "Html", link: "/" },
-  { name: "CSS", link: "/CSS" },
-  { name: "JavaScript", link: "/JS" },
+  { name: "Html", link: "/", content: "table" },
+  { name: "CSS", link: "/CSS", content: "margin" },
+  { name: "JavaScript", link: "/JS", content: "promise" },
 ];
 const Content = [{ topic: "/margin" }, { topic: "/padding" }];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -104,7 +104,6 @@ const W3Navbar = () => {
                     </Typography>
                   </MenuItem>
                 ))}
-               
               </Menu>
             </Box>
 
@@ -131,7 +130,6 @@ const W3Navbar = () => {
             {/* medium screen display box*/}
 
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              
               {pages1.map((value) => (
                 <Link
                   component={RouterLink}

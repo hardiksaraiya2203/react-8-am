@@ -25,13 +25,21 @@ import ParentForCrud from './ParentForCrud';
 import { BrowserRouter } from 'react-router-dom';
 import W3Routes from './W3Routes';
 import W3Navbar from './W3Navbar';
+import { CrudROutes } from './CrudROutes';
+import { Provider } from 'react-redux';
+import CounterData from './counterRedux';
+import store from './store/store';
+import UserReducer from './reducer/userReducer';
+import { UserReducer1 } from './UserReducer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <W3Navbar />
-      <W3Routes />
+      <CrudROutes />
+      {/* <Provider store={store}>
+        <UserReducer1 />
+      </Provider> */}
     </BrowserRouter>
 
   </React.StrictMode >
