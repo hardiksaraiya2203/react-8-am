@@ -36,7 +36,7 @@ const ParentForCrud = () => {
       <Button variant="outlined" onClick={handleOpen}>
         Open form dialog
       </Button>
-      <FormForCRUD open={open} handleClose={handleClose} data={data} setData={setData} index={index}/>
+      <FormForCRUD open={open} handleClose={handleClose} data={data} setData={setData} index={index} setIndex={setIndex}/>
       <DisplayEmpCRUD data={data} deleteEmp={deleteEmp} editEmp={editEmp}/>
     </div>
   );

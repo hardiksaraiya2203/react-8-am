@@ -9,7 +9,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 
 const FormForCRUD = (props) => {
 
-    const {open,handleClose,data,setData,index} = props;
+    const {open,handleClose,data,setData,index,setIndex} = props;
     const [form,setForm] = useState({
       firstName:"",
       lastName:"",
@@ -20,7 +20,10 @@ const FormForCRUD = (props) => {
       if(index>=0){
         setForm(data[index]);
       }
-    },[])
+      else{
+        setForm({firstName:"",lastName:""})
+      }
+    },[index,open])
 
     const handleSave = () =>{
       let d = [...data];
@@ -32,6 +35,7 @@ const FormForCRUD = (props) => {
       else{
         d[index]= form;
       }
+      setIndex(-1)
       setData(d);
       handleClose();
     }
