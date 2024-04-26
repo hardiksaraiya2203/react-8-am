@@ -6,7 +6,7 @@ import { PCrudwithapi } from './PCrudwithapi'
 export const CrudROutes = () => {
   return (
     <Routes>
-        {/* <Route path='/crud' element={<ParentForCrud></ParentForCrud>}/> */}
+        <Route path='/crud' element={<ParentForCrud></ParentForCrud>}/>
         <Route path='/crudwithapi' element={<PCrudwithapi></PCrudwithapi>}/>
     </Routes>
   )
