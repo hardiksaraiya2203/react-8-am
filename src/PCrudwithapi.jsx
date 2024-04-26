@@ -6,19 +6,18 @@ import Button from "@mui/material/Button";
 export const PCrudwithapi = () => {
   const [open, setOpen] = useState(false);
   const [d, setD] = useState(null);
-  
+
   const handleClose = () => {
     setOpen(false);
-    setD(null)
+    setD(null);
   };
   const handleOpen = (data) => {
     setOpen(true);
     setD(data);
   };
-  const handleOpenForAdd= ()=>{
-
+  const handleOpenForAdd = () => {
     setOpen(true);
-  }
+  };
   return (
     <div>
       <Button variant="outlined" onClick={handleOpenForAdd}>

@@ -1,8 +1,9 @@
 import { createStoreHook } from "react-redux";
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import counterReducer from "../reducer/counterReducer";
 import rootReducer from "../reducer/rootReducer";
+import {thunk} from 'redux-thunk';
 
-const store = createStore(rootReducer)
+const store = createStore(rootReducer,applyMiddleware(thunk))
 
 export default store;

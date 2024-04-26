@@ -31,6 +31,7 @@ import CounterData from './counterRedux';
 import store from './store/store';
 import UserReducer from './reducer/userReducer';
 import { UserReducer1 } from './UserReducer';
+import { MyUser } from './MyUser';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -38,7 +39,7 @@ root.render(
     <BrowserRouter>
       <CrudROutes />
       {/* <Provider store={store}>
-        <UserReducer1 />
+        <MyUser />
       </Provider> */}
     </BrowserRouter>
 
