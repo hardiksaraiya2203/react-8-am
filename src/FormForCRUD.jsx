@@ -8,40 +8,36 @@ import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
 const FormForCRUD = (props) => {
+  const { open, handleClose, data, setData, index, setIndex } = props;
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    id: 0,
+  });
 
-    const {open,handleClose,data,setData,index,setIndex} = props;
-    const [form,setForm] = useState({
-      firstName:"",
-      lastName:"",
-      id:0
-    })
-
-    useEffect(()=>{
-      if(index>=0){
-        setForm(data[index]);
-      }
-      else{
-        setForm({firstName:"",lastName:""})
-      }
-    },[index,open])
-
-    const handleSave = () =>{
-      let d = [...data];
-
-      if(index<0){
-
-        d.push({...form,id: d.length});
-      }
-      else{
-        d[index]= form;
-      }
-      setIndex(-1)
-      setData(d);
-      handleClose();
+  useEffect(() => {
+    if (index >= 0) {
+      setForm(data[index]);
+    } else {
+      setForm({ firstName: "", lastName: "" });
     }
-    const handleInput = (e) =>{
-      setForm({...form,[e.target.name]:e.target.value})
+  }, [index, open]);
+
+  const handleSave = () => {
+    let d = [...data];
+
+    if (index < 0) {
+      d.push({ ...form, id: d.length });
+    } else {
+      d[index] = form;
     }
+    setIndex(-1);
+    setData(d);
+    handleClose();
+  };
+  const handleInput = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
   return (
     <div>
       <Dialog
@@ -61,9 +57,7 @@ const FormForCRUD = (props) => {
       >
         <DialogTitle>Login</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            Fill up the details
-          </DialogContentText>
+          <DialogContentText>Fill up the details</DialogContentText>
           <TextField
             autoFocus
             required
@@ -93,7 +87,9 @@ const FormForCRUD = (props) => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button type="button" onClick={handleSave}>Save</Button>
+          <Button type="button" onClick={handleSave}>
+            Save
+          </Button>
         </DialogActions>
       </Dialog>
     </div>

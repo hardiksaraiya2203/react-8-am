@@ -28,20 +28,22 @@ import W3Navbar from './W3Navbar';
 import { CrudROutes } from './CrudROutes';
 import { Provider } from 'react-redux';
 import CounterData from './counterRedux';
-import store from './store/store';
+import store from './sstore/Store';
 import UserReducer from './reducer/userReducer';
 import { UserReducer1 } from './UserReducer';
 import { MyUser } from './MyUser';
+import CountRedux from './CountRedux';
+import Review from './Review';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <CrudROutes />
-      {/* <Provider store={store}>
-        <MyUser />
-      </Provider> */}
-    </BrowserRouter>
+    {/* <BrowserRouter>
+      <CrudROutes /> */}
+      <Provider store={store}>
+        <Review />
+      </Provider>
+    {/* </BrowserRouter> */}
 
   </React.StrictMode >
 );

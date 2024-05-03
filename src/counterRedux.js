@@ -7,7 +7,8 @@ export default function CounterData() {
   const dis = useDispatch()
 
   const inc = () =>{
-    dis(INC())
+    // dis(INC())
+    dis({"type": "INCREMENT_ASYNC"})
   }
   const dec = () =>{
     dis(DEC())
