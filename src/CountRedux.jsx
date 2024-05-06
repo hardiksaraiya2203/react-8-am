@@ -4,7 +4,7 @@ import { DEC, INC } from './aaction/CountAction'
 
 const CountRedux = () => {
 
-    const s = useSelector(y=>y)
+    const s = useSelector(y=>y.counter)
     const dis = useDispatch()
 
     const INCREMENT = () =>{
@@ -28,23 +28,3 @@ export default CountRedux
 
 
 // btn call-->function-->action-->reducer-->store-->component has changed value of state
-
-
-// drop  =
-// 2 drop
-// drop
-// no 
-// no 
-// no 
-// // emp 
-// t
-// d
-// d
-// n
-
-// tax
-// t
-// t
-// t
-// check
-

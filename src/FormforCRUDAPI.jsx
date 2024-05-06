@@ -23,9 +23,11 @@ export const FormforCRUDAPI = (props) => {
 
   const handleSave = () => {
     let method1 = d ? "PUT" : "POST";
-    let url = d? `https://6629e68567df268010a1ebcf.mockapi.io/api/v1/CrudApi/${data.id}`: "https://6629e68567df268010a1ebcf.mockapi.io/api/v1/CrudApi";
+    let url = d
+      ? `https://6629e68567df268010a1ebcf.mockapi.io/api/v1/CrudApi/${data.id}`
+      : "https://6629e68567df268010a1ebcf.mockapi.io/api/v1/CrudApi";
     fetch(url, {
-      method: d? "PUT" : "POST",
+      method: d ? "PUT" : "POST",
       body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +35,7 @@ export const FormforCRUDAPI = (props) => {
     })
       .then((y) => y.json())
       .then((y) => {
-        setData({firstName: "",lastName:""});
+        setData({ firstName: "", lastName: "" });
         handleClose();
       });
   };

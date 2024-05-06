@@ -33,7 +33,8 @@ import UserReducer from './reducer/userReducer';
 import { UserReducer1 } from './UserReducer';
 import { MyUser } from './MyUser';
 import CountRedux from './CountRedux';
-import Review from './Review';
+import UserRedux from './UserRedux';
+import ReviewRedux from './ReviewRedux';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -41,7 +42,9 @@ root.render(
     {/* <BrowserRouter>
       <CrudROutes /> */}
       <Provider store={store}>
-        <Review />
+        <CountRedux />
+        <UserRedux />
+        <ReviewRedux />
       </Provider>
     {/* </BrowserRouter> */}
 
